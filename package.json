@@ -1,0 +1,30 @@
+{
+  "name": "gatsby-remark-reference-footnotes",
+  "version": "0.0.1",
+  "description": "gatsby remark plugin to generate footnotes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/signalwerk/gatsby-remark-reference-footnotes.git"
+  },
+  "keywords": [
+    "gatsby",
+    "remark",
+    "gatsby-plugin",
+    "footnotes"
+  ],
+  "author": "Stefan Huber, Signalwerk GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/signalwerk/gatsby-remark-reference-footnotes/issues"
+  },
+  "homepage": "https://github.com/signalwerk/gatsby-remark-reference-footnotes#readme",
+  "dependencies": {
+    "hast-util-to-html": "^6.0.2",
+    "js-yaml": "^3.13.1",
+    "unist-util-visit": "^2.0.0"
+  }
+}
