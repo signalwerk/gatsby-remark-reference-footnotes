@@ -16,8 +16,22 @@ npm i gatsby-remark-reference-footnotes
 Generate footnotes:
 
 ````md
+[^Normal footnote]
+
+
 ```references
 # This code block gets replaced with footnotes
+```
+````
+
+Generate footnotes for a specific group of footnotes:
+````md
+
+[^:fig:Footnot for group named `fig`]
+
+```references
+# This code block gets replaced with footnotes for group `fig`
+group-include: fig
 ```
 ````
 
