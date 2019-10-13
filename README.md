@@ -27,7 +27,7 @@ Generate footnotes:
 Generate footnotes for a specific group of footnotes:
 ````md
 
-[^:fig:Footnot for group named `fig`]
+[^:fig:Footnote for group named fig]
 
 ```references
 # This code block gets replaced with footnotes for group `fig`
