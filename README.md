@@ -11,26 +11,23 @@
 npm i gatsby-remark-reference-footnotes
 ```
 
-
 ## Use
 Generate footnotes:
 
 ````md
 [^Normal footnote]
 
-
+<!-- This code block gets replaced with footnotes -->
 ```references
-# This code block gets replaced with footnotes
 ```
 ````
 
 Generate footnotes for a specific group of footnotes:
 ````md
-
 [^:fig:Footnote for group named fig]
 
+<!-- This code block gets replaced with footnotes for group `fig` -->
 ```references
-# This code block gets replaced with footnotes for group `fig`
 group-include: fig
 ```
 ````
@@ -38,8 +35,8 @@ group-include: fig
 If you like to overwrite the global settings in place (camelCase or kebab-case):
 
 ````md
+<!-- This code block gets replaced with footnotes -->
 ```references
-# This code block gets replaced with footnotes
 group-include: fig
 
 inline-link-prefix: ' Fig. '
@@ -55,8 +52,6 @@ reference-text-prefix:  ' '
 reference-text-suffix:  ''
 ```
 ````
-
-
 
 ## Global Configuration
 Global configurations can be set in `gatsby-config.js`.
@@ -121,8 +116,6 @@ If a footnote reference starts with `:groupname:` the output can be filtered by 
 `string?` — default: `' '`
 *Footnote:* text after reference link
 
-
-
 ### `reference-link-position`
 
 `string?` — default: `start` – options: `start`|`end`
@@ -165,13 +158,13 @@ Text with inline footnote[^here the inline reference].
 [^test]: This is the named reference
 
 ### Footnotes
+<!-- This code block gets replaced with footnotes -->
 ```references
-# gets repalced with footnotes
 ```
 
 ### Figures
+<!-- This code block gets replaced with footnotes -->
 ```references
-# gets repalced with footnotes
 group-include: fig
 inline-link-prefix: 'Fig. '
 reference-link-position: end
