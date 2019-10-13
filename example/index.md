@@ -1,26 +1,30 @@
-# Text
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+<style>
+  html {
+    font-family: 'Open Sans', sans-serif;
+    margin: 2rem;
+  }
+  img {
+    display: block;
+  }
+</style>
 
-Text with inline footnote[^here the reference].
 
-![Cat](http://placekitten.com/g/200/300)
-*This is a cat [^:fig:From placekitten.com]*
+Text with[^test] reference footnote[^test].
+Text with inline footnote[^here the inline reference].
 
-Text with reference footnote[^test].
-
+![Cat](http://placekitten.com/g/80/120)
+*This is a cat [^:fig:Reference from a different group]*
 
 <!-- refs -->
+[^test]: This is the named reference
 
-[^:fig:test]: This is the named reference
-
-
-## Footnotes
-
+### Footnotes
 ```references
 # gets repalced with footnotes
 ```
 
-## Figures
-
+### Figures
 ```references
 # gets repalced with footnotes
 group-include: fig

@@ -6,7 +6,12 @@ const fs = require("fs");
 let data = fs.readFileSync("./index.md");
 
 const footnotes = () => {
-  return markdownAST =>
+  return markdownAST => {
+    fs.writeFileSync(
+      "./data-before.json",
+      JSON.stringify(markdownAST, null, 2)
+    );
+
     gatsbyFootnotes(
       { markdownAST },
       {
@@ -16,6 +21,8 @@ const footnotes = () => {
         toHeading: 6
       }
     );
+    fs.writeFileSync("./data-after.json", JSON.stringify(markdownAST, null, 2));
+  };
 };
 
 remark()
@@ -28,5 +35,4 @@ remark()
     if (err) throw err;
     // console.log(String(file));
     fs.writeFileSync("./index.html", String(file));
-
   });

@@ -139,27 +139,21 @@ module.exports = ({ root }) => ({
 ### Input
 
 ````md
-Text with inline footnote[^here the reference].
+Text with[^test] reference footnote[^test].
+Text with inline footnote[^here the inline reference].
 
-![Cat](http://placekitten.com/g/200/300)
-*This is a cat [^:fig:From placekitten.com]*
-
-Text with reference footnote[^test].
-
+![Cat](http://placekitten.com/g/80/120)
+*This is a cat [^:fig:Reference from a different group]*
 
 <!-- refs -->
+[^test]: This is the named reference
 
-[^:fig:test]: This is the named reference
-
-
-## Footnotes
-
+### Footnotes
 ```references
 # gets repalced with footnotes
 ```
 
-## Figures
-
+### Figures
 ```references
 # gets repalced with footnotes
 group-include: fig
@@ -172,27 +166,7 @@ reference-text-prefix: ' '
 ````
 
 ### Output
-<p>Text with inline footnote<sup class="footnote-inline" id="use-ref-1"><a href="#ref-1" class="footnote-inline-link">1</a></sup>.</p>
-<p><img src="http://placekitten.com/g/200/300" alt="Cat">
-<em>This is a cat <sup class="footnote-inline" id="use-ref-fig-1"><a href="#ref-fig-1" class="footnote-inline-link">Fig. 1</a></sup></em></p>
-<p>Text with reference footnote<sup class="footnote-inline" id="use-ref-2"><a href="#ref-2" class="footnote-inline-link">2</a></sup>.</p>
-<!-- refs -->
-<h2>Footnotes</h2>
-<div class="ref-notes refnotes--default">
-<ul>
-<li>
-<p><span class="footnote-ref" id="ref-1"><a id="use-ref-1" href="#use-ref-1" class="footnote-ref-link">↑ 1.</a> </span>here the reference</p>
-</li>
-</ul>
-</div>
-<h2>Figures</h2>
-<div class="ref-notes refnotes--fig">
-<ul>
-<li>
-<p>From placekitten.com<span class="footnote-ref" id="ref-fig-1"> <a id="use-ref-fig-1" href="#use-ref-fig-1" class="footnote-ref-link"> Fig. 1 ⇡</a> </span></p>
-</li>
-</ul>
-</div>
+![example output](./example/doc.png)
 
 ## License
 
