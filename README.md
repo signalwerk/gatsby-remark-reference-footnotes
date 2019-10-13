@@ -18,6 +18,7 @@ Generate footnotes:
 [^Normal footnote]
 
 <!-- This code block gets replaced with footnotes -->
+
 ```references
 ```
 ````
@@ -27,6 +28,7 @@ Generate footnotes for a specific group of footnotes:
 [^:fig:Footnote for group named fig]
 
 <!-- This code block gets replaced with footnotes for group `fig` -->
+
 ```references
 group-include: fig
 ```
@@ -36,6 +38,7 @@ If you like to overwrite the global settings in place (camelCase or kebab-case):
 
 ````md
 <!-- This code block gets replaced with footnotes -->
+
 ```references
 group-include: fig
 
@@ -159,11 +162,13 @@ Text with inline footnote[^here the inline reference].
 
 ### Footnotes
 <!-- This code block gets replaced with footnotes -->
+
 ```references
 ```
 
 ### Figures
 <!-- This code block gets replaced with footnotes -->
+
 ```references
 group-include: fig
 inline-link-prefix: 'Fig. '
