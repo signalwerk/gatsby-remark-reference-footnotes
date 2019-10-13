@@ -11,6 +11,75 @@
 npm i gatsby-remark-reference-footnotes
 ```
 
+
+## Use
+Generate footnotes:
+
+````md
+```references
+# This code block gets replaced with footnotes
+```
+````
+
+If you like to overwrite the global settings in place (camelCase or kebab-case):
+
+````md
+```references
+# This code block gets replaced with footnotes
+group-include: fig
+
+inline-link-prefix: ' Fig. '
+inline-link-suffix: '.'
+inline-text-prefix: ' '
+inline-text-suffix: ''
+
+reference-link-position: end
+
+reference-link-prefix:  ' Fig. '
+reference-link-suffix:  '.⇡'
+reference-text-prefix:  ' '
+reference-text-suffix:  ''
+```
+````
+
+
+
+## Global Configuration
+Global configurations can be set in `gatsby-config.js`.
+
+```js
+module.exports = ({ root }) => ({
+  plugins: [
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-reference-footnotes`,
+            options: {
+              groupInclude: 'default',
+
+              inlineLinkPrefix: '',
+              inlineLinkSuffix: '',
+              inlineTextPrefix: '',
+              inlineTextSuffix: '',
+
+              referenceLinkPosition: 'start',
+
+              referenceLinkPrefix:  '↑ ',
+              referenceLinkSuffix:  '.',
+              referenceTextPrefix:  '',
+              referenceTextSuffix:  ' '
+            },
+          }
+        ],
+      },
+    },
+  ],
+})
+```
+
+
 ## Options
 ### `group-include`
 
@@ -66,73 +135,6 @@ If a footnote reference starts with `:groupname:` the output can be filtered by 
 *Footnote-Reference:* text after inline link
 
 
-
-
-
-## Use
-Generate footnotes:
-
-````md
-```references
-# This code block gets replaced with footnotes
-```
-````
-
-If you like to overwrite the global settings in place (camelCase or kebab-case):
-
-````md
-```references
-# This code block gets replaced with footnotes
-group-include: fig
-
-inline-link-prefix: ' Fig. '
-inline-link-suffix: '.'
-inline-text-prefix: ' '
-inline-text-suffix: ''
-
-reference-link-position: end
-
-reference-link-prefix:  ' Fig. '
-reference-link-suffix:  '.⇡'
-reference-text-prefix:  ' '
-reference-text-suffix:  ''
-```
-````
-
-## Global Configuration
-Global configurations can be set in `gatsby-config.js`.
-
-```js
-module.exports = ({ root }) => ({
-  plugins: [
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-reference-footnotes`,
-            options: {
-              groupInclude: 'default',
-
-              inlineLinkPrefix: '',
-              inlineLinkSuffix: '',
-              inlineTextPrefix: '',
-              inlineTextSuffix: '',
-
-              referenceLinkPosition: 'start',
-
-              referenceLinkPrefix:  '↑ ',
-              referenceLinkSuffix:  '.',
-              referenceTextPrefix:  '',
-              referenceTextSuffix:  ' '
-            },
-          }
-        ],
-      },
-    },
-  ],
-})
-```
 
 ## Example
 
