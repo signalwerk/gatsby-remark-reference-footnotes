@@ -2,7 +2,7 @@
 
 [![Downloads][downloads-badge]][downloads]
 
-[Gatsby][gatsby] plugin using [remark][remark] to generate footnotes.
+[Gatsby][gatsby] plugin using [remark][remark] to generate footnotes with advanced grouping.
 
 
 ## Installation
