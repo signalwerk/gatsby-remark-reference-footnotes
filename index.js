@@ -225,7 +225,7 @@ const transformerRef = ({ markdownAST, index, prefs }) => {
     list,
     {
       type: "html",
-      value: `</div>`
+      value: "</div>"
     },
     markdownAST.children.slice(index + 1)
   );
