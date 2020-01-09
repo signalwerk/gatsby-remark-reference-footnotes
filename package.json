@@ -1,6 +1,6 @@
 {
   "name": "gatsby-remark-reference-footnotes",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "gatsby remark plugin to generate footnotes",
   "main": "index.js",
   "scripts": {
