@@ -4,7 +4,6 @@
 
 [Gatsby][gatsby] plugin using [remark][remark] to generate footnotes with advanced grouping.
 
-
 ## Installation
 
 ```sh
@@ -12,6 +11,7 @@ npm i gatsby-remark-reference-footnotes
 ```
 
 ## Use
+
 Generate footnotes:
 
 ````md
@@ -20,10 +20,12 @@ Generate footnotes:
 <!-- This code block gets replaced with footnotes -->
 
 ```references
+
 ```
 ````
 
 Generate footnotes for a specific group of footnotes:
+
 ````md
 [^:fig:Footnote for group named fig]
 
@@ -57,6 +59,7 @@ reference-text-suffix:  ''
 ````
 
 ## Global Configuration
+
 Global configurations can be set in `gatsby-config.js`.
 
 ```js
@@ -69,82 +72,79 @@ module.exports = ({ root }) => ({
           {
             resolve: `gatsby-remark-reference-footnotes`,
             options: {
-              groupInclude: 'default',
+              groupInclude: "default",
 
-              inlineLinkPrefix: '',
-              inlineLinkSuffix: '',
-              inlineTextPrefix: '',
-              inlineTextSuffix: '',
+              inlineLinkPrefix: "",
+              inlineLinkSuffix: "",
+              inlineTextPrefix: "",
+              inlineTextSuffix: "",
 
-              referenceLinkPosition: 'start',
+              referenceLinkPosition: "start",
 
-              referenceLinkPrefix:  '↑ ',
-              referenceLinkSuffix:  '.',
-              referenceTextPrefix:  '',
-              referenceTextSuffix:  ' '
-            },
+              referenceLinkPrefix: "↑ ",
+              referenceLinkSuffix: ".",
+              referenceTextPrefix: "",
+              referenceTextSuffix: " "
+            }
           }
-        ],
-      },
-    },
-  ],
-})
+        ]
+      }
+    }
+  ]
+});
 ```
 
-
 ## Options
+
 ### `group-include`
 
 `string?` — default: `default`  
 If a footnote reference starts with `:groupname:` the output can be filtered by this group-name.
 
-
 ### `reference-link-prefix`
 
-`string?` — default: `↑ `
-*Footnote:* in link before reference number
+`string?` — default: `↑`
+_Footnote:_ in link before reference number
 
 ### `reference-link-suffix`
 
 `string?` — default: `.`
-*Footnote:* in link after reference number
+_Footnote:_ in link after reference number
 
 ### `reference-text-prefix`
 
 `string?` — default: `''`
-*Footnote:* text before reference link
+_Footnote:_ text before reference link
 
 ### `reference-text-suffix`
 
 `string?` — default: `' '`
-*Footnote:* text after reference link
+_Footnote:_ text after reference link
 
 ### `reference-link-position`
 
 `string?` — default: `start` – options: `start`|`end`
-*Footnote-Reference:* should the reference link be at the `start` or `end`
+_Footnote-Reference:_ should the reference link be at the `start` or `end`
 
 ### `inline-link-prefix`
 
 `string?` — default: `''`
-*Footnote-Reference:* in link before inline number
+_Footnote-Reference:_ in link before inline number
 
 ### `inline-link-suffix`
 
 `string?` — default: `''`
-*Footnote-Reference:* in link after inline number
+_Footnote-Reference:_ in link after inline number
 
 ### `inline-text-prefix`
 
 `string?` — default: `''`
-*Footnote-Reference:* text before inline link
+_Footnote-Reference:_ text before inline link
 
 ### `inline-text-suffix`
 
 `string?` — default: `''`
-*Footnote-Reference:* text after inline link
-
-
+_Footnote-Reference:_ text after inline link
 
 ## Example
 
@@ -155,18 +155,22 @@ Text with[^test] reference footnote[^test].
 Text with inline footnote[^here the inline reference].
 
 ![Cat](http://placekitten.com/g/80/120)
-*This is a cat [^:fig:Reference from a different group]*
+_This is a cat [^:fig:Reference from a different group]_
 
 <!-- refs -->
+
 [^test]: This is the named reference
 
 ### Footnotes
+
 <!-- This code block gets replaced with footnotes -->
 
 ```references
+
 ```
 
 ### Figures
+
 <!-- This code block gets replaced with footnotes -->
 
 ```references
@@ -180,6 +184,7 @@ reference-text-prefix: ' '
 ````
 
 ### Output
+
 ![example output](./example/doc.png)
 
 ## License
@@ -188,10 +193,13 @@ reference-text-prefix: ' '
 
 <!-- Definitions -->
 
-
 [gatsby]: https://www.gatsbyjs.org/
 [remark]: https://github.com/remarkjs/remark
 [downloads]: https://www.npmjs.com/package/gatsby-remark-reference-footnotes
 [downloads-badge]: https://img.shields.io/npm/v/gatsby-remark-reference-footnotes.svg
 [license]: https://opensource.org/licenses/MIT
 [author]: http://signalwerk.ch/
+
+## Version
+
+- **0.0.4** – FIX: sorting problems
