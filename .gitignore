@@ -1,6 +1,3 @@
 .DS_Store
 /node_modules
 /example/node_modules
-/example/data-after.json
-/example/data-before.json
-/example/index.html
