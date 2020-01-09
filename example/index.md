@@ -9,22 +9,31 @@
   }
 </style>
 
-
 Text with[^test] reference footnote[^test].
 Text with inline footnote[^here the inline reference].
 
 ![Cat](http://placekitten.com/g/80/120)
-*This is a cat [^:fig:Reference from a different group]*
+_This is a cat [^:fig:pic]_
+
+![Cat](http://placekitten.com/g/80/120)
+_This is a second cat [^:fig:Reference from a different group]_
+
+And here we reuse the footnote[^test].
+Also a use of a Fig refernce [^:fig:pic].
 
 <!-- refs -->
+
 [^test]: This is the named reference
+[^:fig:pic]: Reference from a group
 
 ### Footnotes
+
 ```references
 # gets repalced with footnotes
 ```
 
 ### Figures
+
 ```references
 # gets repalced with footnotes
 group-include: fig

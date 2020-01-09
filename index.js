@@ -123,7 +123,7 @@ const transformerRef = ({ markdownAST, index, prefs }) => {
   });
 
   // sort footnotes
-  footnotes.sort((a, b) => a.offset > b.offset);
+  footnotes.sort((a, b) => a.offset - b.offset);
 
   // filter by identifier
   let uniqueFootnotes = footnotes.filter(
