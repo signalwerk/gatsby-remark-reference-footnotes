@@ -1,7 +1,7 @@
 {
   "name": "gatsby-remark-reference-footnotes",
   "version": "0.0.4",
-  "description": "gatsby remark plugin to generate footnotes",
+  "description": "Gatsby plugin using remark to generate footnotes with advanced grouping.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
