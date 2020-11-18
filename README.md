@@ -7,6 +7,10 @@
 
 ## Example
 
+### Output
+
+![example output](./example/doc.png)
+
 ### Input
 
 ````md
@@ -41,10 +45,6 @@ reference-link-suffix: ' ⇡'
 reference-text-prefix: ' '
 ```
 ````
-
-### Output
-
-![example output](./example/doc.png)
 
 ## Installation
 
