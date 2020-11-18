@@ -1,4 +1,4 @@
-# Footnotes in Gatsby
+# Gatsby · Footnotes with advanced grouping · ↓📖
 
 [![Downloads][downloads-badge]][downloads]
 
