@@ -4,6 +4,48 @@
 
 [Gatsby][gatsby] plugin using [remark][remark] to generate footnotes with advanced grouping.
 
+
+## Example
+
+### Input
+
+````md
+Text with[^test] reference footnote[^test].
+Text with inline footnote[^here the inline reference].
+
+![Cat](http://placekitten.com/g/80/120)
+_This is a cat [^:fig:Reference from a different group]_
+
+<!-- refs -->
+
+[^test]: This is the named reference
+
+### Footnotes
+
+<!-- This code block gets replaced with footnotes -->
+
+```references
+
+```
+
+### Figures
+
+<!-- This code block gets replaced with footnotes -->
+
+```references
+group-include: fig
+inline-link-prefix: 'Fig. '
+reference-link-position: end
+reference-link-prefix: ' Fig. '
+reference-link-suffix: ' ⇡'
+reference-text-prefix: ' '
+```
+````
+
+### Output
+
+![example output](./example/doc.png)
+
 ## Installation
 
 ```sh
@@ -145,47 +187,6 @@ _Footnote-Reference:_ text before inline link
 
 `string?` — default: `''`
 _Footnote-Reference:_ text after inline link
-
-## Example
-
-### Input
-
-````md
-Text with[^test] reference footnote[^test].
-Text with inline footnote[^here the inline reference].
-
-![Cat](http://placekitten.com/g/80/120)
-_This is a cat [^:fig:Reference from a different group]_
-
-<!-- refs -->
-
-[^test]: This is the named reference
-
-### Footnotes
-
-<!-- This code block gets replaced with footnotes -->
-
-```references
-
-```
-
-### Figures
-
-<!-- This code block gets replaced with footnotes -->
-
-```references
-group-include: fig
-inline-link-prefix: 'Fig. '
-reference-link-position: end
-reference-link-prefix: ' Fig. '
-reference-link-suffix: ' ⇡'
-reference-text-prefix: ' '
-```
-````
-
-### Output
-
-![example output](./example/doc.png)
 
 ## License
 
