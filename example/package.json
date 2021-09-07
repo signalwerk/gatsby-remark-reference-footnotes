@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "remark": "^11.0.1",
-    "remark-html": "^10.0.0"
+    "remark-html": "^13.0.2"
   }
 }
